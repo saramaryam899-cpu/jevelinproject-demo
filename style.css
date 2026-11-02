@@ -483,18 +483,7 @@ text-align: center;
   color: #777;
 }
 /* cards */
-/* .price-card{
-  flex: 1;
- background: #f6f4ff;
-  height:700px;
-  border: 2px solid transparent;
-  border-radius: 14px;
-   width: 50px;
-  animation: fadeUp linear both;
-  animation-timeline: view();
-  animation-range: entry 0% entry 60%;
-   }  */
-     .price-card {
+ .price-card {
   flex: 1;
   min-width: 0;
   background: #f6f4ff;
