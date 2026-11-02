@@ -128,43 +128,60 @@ a:hover {
 }
 /* NAVBAR */
 .navbar {
-  background-color: transparent;
+    background-color: transparent;
 }
 .navbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  font-weight: 700;
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    font-weight: 700;
 }
+
 .logo {
     background-image: url(logo.webp);
     width: 100px;
     height: 25px;
     background-size: contain;
 }
+
 .menu {
-  display: flex;
-  gap: 35px;
-  padding-left: 450px;
+        display: flex;
+    align-items: center;
+    gap: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+.menu .btn {
+    position: absolute;
+    left: calc(100% + 300px);
+    margin: 0;
+    white-space: nowrap;
 }
 .menu .active {
     text-decoration: blue underline;
-    }
-.btn {
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  background-color: #2d1dff;
-  border: none;
-  border-radius: 3px;
-  padding: 14px 28px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
+
+.btn {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2d1dff;
+    border: none;
+    border-radius: 3px;
+    padding: 14px 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  
+}
+
 .btn:hover {
-  background-color: #5a4ffa;
+    background-color: #5a4ffa;
 }
 /* HERO */
 .hero {
@@ -239,13 +256,13 @@ a:hover {
 }
 
 .feature-box h3 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
 .feature-box p {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 300;
   line-height: 2;
 }
@@ -303,7 +320,8 @@ a:hover {
   animation-timeline: view();
   animation-range: entry 5% entry 60%;
   will-change: transform, opacity;
-}
+   margin-bottom: 20px;
+ }
 
 .about-image img {
   width: 100%;
@@ -328,14 +346,15 @@ a:hover {
   animation-timeline: view();
   animation-range: entry 0% entry 60%;
   will-change: transform, opacity;
-}
+  margin-top: 20px;
+ }
 .mind-image img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
-}
+ }
 .mind-text {
   animation: fadeUp linear both;
   animation-timeline: view();
@@ -538,13 +557,10 @@ text-align: center;
   font-size: 16px;
   padding-left: 20px;
 }
-.price-card.reveal {
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out,
-              translate 0.3s ease, box-shadow 0.3s ease;
-}
-
 .price-card.featured.reveal {
-  transition-delay: 0.15s, 0.15s, 0s, 0s;
+ opacity: 1;
+  transform: none;
+  animation: none;
 }
 
 .price-card:hover {
@@ -772,22 +788,63 @@ text-align: center;
     padding-left: 25px;
     padding-right: 25px;
   }
+.navbar {
+    background-color: transparent;
+}
+.navbar-inner {
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    font-weight: 700;
+}
 
-  .menu {
-    padding-left: 0;
-    gap: 18px;
-  }
+.logo {
+    background-image: url(logo.webp);
+    width: 100px;
+    height: 25px;
+    background-size: contain;
+}
 
-  .navbar-inner {
-    gap: 18px;
-  }
-
-  .btn {
-    padding: 12px 18px;
+.menu {
+        display: flex;
+    align-items: center;
+    gap: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+.menu .btn {
+    position: absolute;
+    left: calc(100% + 200px);
+    margin: 0;
     white-space: nowrap;
-  }
+}
+.menu .active {
+    text-decoration: blue underline;
+}
 
-  .hero-content {
+.btn {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2d1dff;
+    border: none;
+    border-radius: 3px;
+    padding: 14px 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  
+}
+
+.btn:hover {
+    background-color: #5a4ffa;
+    }
+      .hero-content {
     padding: 100px 25px 120px;
   }
 
@@ -797,7 +854,7 @@ text-align: center;
   }
 
   .hero-content h4 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
 
@@ -807,11 +864,11 @@ text-align: center;
   }
 
   .feature-box h3 {
-    font-size: 21px;
+    font-size: 35px;
   }
 
   .feature-box p {
-    font-size: 15px;
+    font-size: 25px;
   }
 
   .about,
@@ -911,6 +968,11 @@ text-align: center;
     gap: 12px;
     font-size: 15px;
   }
+  .price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
 
   .video h2 {
     font-size: 48px;
@@ -1009,7 +1071,7 @@ text-align: left;
     font-size: 9px;
   }
 
-  /* MAIN NAVBAR: no JavaScript */
+  /* MAIN NAVBAR*/
 
   .navbar-inner {
     height: auto;
@@ -1201,6 +1263,7 @@ text-align: left;
     font-size: 15px;
     line-height: 1.8;
   }
+  
 
   /* VIDEO */
 
@@ -1298,7 +1361,11 @@ text-align: left;
     margin: 10px 0 0;
     text-align: center;
   }
-
+.price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
   /* CONTACT CTA */
 
   .cta {
@@ -1620,6 +1687,11 @@ text-align: left;
 .price-card li{
  margin-bottom: 10px ;
 }
+.price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
   .footer-top {
     gap: 22px 8px;
   }
@@ -1806,6 +1878,11 @@ text-align: left;
 .price-card li{
  margin-bottom: 10px ;
 }
+.price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
 .footer{
   margin-top: 1px;
 }
@@ -1851,7 +1928,11 @@ text-align: left;
   font-size: 8px;
   white-space: nowrap;
 }
-
+.price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
 }
   
   /* ==========================
@@ -1881,7 +1962,7 @@ text-align: left;
     padding-left: 0;
     flex-wrap: wrap;
   }
-  @keyframes fadeUp {
+   @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
@@ -2012,12 +2093,17 @@ about,
 .price-card li{
  margin-bottom: 10px ;
 }
+.price-card.featured.reveal {
+ opacity: 1;
+  transform: none;
+  animation: none;
+}
 .footer{
   margin-top: 1px;
 }
 }
 @media (min-width: 1024px) {
-  html,
+   html,
   body {
     max-width: 100%;
     overflow-x: clip;
@@ -2033,13 +2119,17 @@ gap: 15px;
   order: 3;
   flex-shrink: 0;
   padding: 15px 10px;
-  font-size: 24px;
+  font-size: 19px;
   white-space: nowrap;
   margin-top: 20px;
 }
 .logo{
-  font-size: 19px;
-    @keyframes fadeUp {
+  font-size: 24px;
+}
+.about-image{
+  height: 200px;
+}
+ @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
@@ -2054,8 +2144,125 @@ gap: 15px;
   to   { opacity: 1; transform: translateX(0); }
 }
 }
-  .about-image{
-  height: 200px;
+/* hamburger by default */
+#menu-toggle{
+  display: none;
 }
-  
+.hamburger{
+  display: none;
+}
+/* mobile hamburger */
+@media screen and (max-width:600px) {
+.navbar{
+  position: relative;
+  height: 60px;
+  padding:10px 20px ;
+  justify-content: space-between;
+  background-color:transparent;
+  z-index: 1000;
+}
+.logo{
+  margin: 0;
+  }
+  .logo img{
+width: 80px;
+}
+.hamburger {
+  display: block;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+#menu-toggle{
+  display: none;
+}
+.menu{
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0;
+  gap: 20px; 
+}
+#menu-toggle:checked
+~ .menu{
+display: flex;
+}
+.menu a{
+  font-size: 14px;
+  margin: 0;
+}
+.btn{
+  padding: 12px 25px;
+  font-size: 12px;
+}
+}
+/* tablet hamburger */
+@media screen and (min-width:601px) and (max-width:768px) {
+    .navbar {
+        position: relative;
+        height: 70px;
+        padding: 10px 30px;
+        justify-content: space-between;
+        background-color: transparent;
+        z-index: 999;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 25px;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .menu a {
+        font-size: 16px;
+        margin: 0;
+    }
+   .btn {
+        padding: 14px 30px;
+        font-size: 13px;
+    }
+     .simple-btn,
+  .simple2-btn {
+    height: auto;
+    line-height: 1.1;
+    padding: 14px 20px;
+    margin-top: 0px;
+    text-align: center;
+  }
 }
