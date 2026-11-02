@@ -67,21 +67,46 @@
   </div>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+   <header class="navbar">
+    <div class="container navbar-inner">
+
+        <div class="logo"></div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <nav class="menu">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <button class="btn">Purchase</button>
+           </nav>
+
+            </div>
+</header>
+  <!-- <header class="navbar">
     <div class="container navbar-inner">
 
      <div class="logo"></div>
-
-      <nav class="menu">
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="hamburger">
+  <i class="fa-solid fa-bars"></i>
+</label>
+ <nav class="menu">
  <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
+         <button class="btn">Purchase</button>
       </nav>
-          <button class="btn">Purchase</button>
-          </div>
-           </header>
+    </div>
+           </header> -->
       <!-- HERO TEXT -->
     <div class="container hero-content">
       <h4>Compliment your ideas with</h4>
@@ -211,7 +236,7 @@
  <div class="price-card featured reveal delay-1">
       <h3>Business</h3>
       <div class="price">$120</div>
-      <p class="price-desc">Curabitur aliquam, felis ut ultricies porta, ante dolor iaculis ante, ante dolor iaculis anteet frin gilla ligula tortor eget nisi.</p>
+      <p class="price-desc">Curabitur aliquam, felis ut ultricies porta, ante dolor iaculis ante, ante dolor iaculis anteet frin gilla ligula tortor eget nisi.ducimus dolorum delectus dignissii.ducimus dolorum  dignissii.</p>
       <ul>
         <li><i class="fa-solid fa-plus"></i> Picture library</li>
         <li><i class="fa-solid fa-plus"></i> 24h support</li>
@@ -219,7 +244,7 @@
         <li><i class="fa-solid fa-plus"></i> Template library</li>
         <li><i class="fa-solid fa-plus"></i> 800 GB cloud storage</li>
       </ul>
-      <a href="#" class="read-btn">Choose pricing</a>
+      <a href="#" class="simple2-btn">Choose pricing</a>
     </div>
 </div>
  </section>
@@ -238,7 +263,7 @@
     <div class="footer-top">
 
       <div class="footer-about">
-        <div class="logo"></div>
+        <div class=" footer-logo"><img src="logo.webp"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at</p>
         <div class="footer-social">
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -246,7 +271,7 @@
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
-      </div>
+       </div>
 
       <div class="footer-col">
         <h4>Explore</h4>
@@ -271,9 +296,7 @@
         <a href="#">Services</a>
         <a href="#">FAQ</a>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <p>Copyright 2026. All rights reserved.</p>
       <nav class="footer-menu">
@@ -284,8 +307,22 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
-
   </div>
-</footer>
+ </footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach((el) => observer.observe(el));
+</script>
 </body>
 </html>
